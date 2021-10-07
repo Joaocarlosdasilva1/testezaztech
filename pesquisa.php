@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    <title>Controle de Tarefas</title>
+    <title>Pesquisa</title>
 </head>
 <body>
     <div class="container">
         <div class ="row">
             <div class ="col">
-                <div class="jumbotron">
-                    <h1 class="display-4">Controle de Tarefas</h1>
-                    <p class="lead">Esse sistema permite controlar tarefas.</p>
-                    <hr class="my-4">
-                    <p>Acesse as funções.</p>
-                    <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="cadastro.php" role="button">Cadastro de Usuários</a>
-                    </p>
-                </div>   
+                <h1>Cadastro de Usuários</h1>  
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>   
+                </form>
             </div>
         </div>
     </div>

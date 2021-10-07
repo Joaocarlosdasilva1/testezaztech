@@ -11,15 +11,20 @@
     <div class="container">
         <div class ="row">
             <?php
+                include "conexao.php";
                 $nome            = $_POST['nome'];
                 $telefone        = $_POST['telefone'];
                 $email           = $_POST['email'];
                 $data_nascimento = $_POST['data_nascimento'];
                 
-                $sql = "INSERT INTO `testezaztech`( `nome`, `telefone`, `email`, `data_nascimento`) VALUES ('$nome','$telefone','$email','$data_nascimento')";
+                $sql = "INSERT INTO usuarios( nome, telefone, email, data_nascimento) VALUES ('$nome','$telefone','$email','$data_nascimento')";
 
-                mysqli_query($)
+                if (mysqli_query($conn, $sql)) {
+                    mensagem("$nome foi cadastrado!", 'success');
+                } else
+                    mensagem("$nome não foi cadastrado!", 'danger');
             ?>
+            <a href="index.php" class="btn btn-primary">Voltar</a>
         </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
