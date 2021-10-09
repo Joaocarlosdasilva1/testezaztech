@@ -5,23 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    <title>Pesquisa</title>
+    <title>Alteração de Tarefas</title>
 </head>
 <body>
     <div class="container">
         <div class ="row">
-            <div class ="col">
-                <h1>Cadastro de Usuários</h1>  
-                <nav class="navbar navbar-light bg-light">
-                    <div class="container-fluid">
-                        <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>   
-                </form>
-            </div>
+            <?php
+                include "conexao.php";
+                $id = $_POST['id']; 
+                $descricao = $_POST['descricao'];
+                foreach($_POST["prioridade"] AS $index => $prioridade) {}
+                foreach($_POST["estado"] AS $index => $estado) {}
+                
+                $sql = "UPDATE tarefas set descricao = '$descricao', prioridade = '$prioridade', estado = '$estado' WHERE cod_tarefa = $id";
+
+                if (mysqli_query($conn, $sql)) {
+                    mensagem("Alterado com sucesso!", 'success');
+                } else
+                    mensagem("Não alterado!", 'danger');
+                ?>
+            <a href="cadastrotarefas.php" class="btn btn-primary">Voltar</a>
         </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
