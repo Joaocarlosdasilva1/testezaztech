@@ -13,9 +13,9 @@
           <?php 
             include "conexao.php";
             $id = $_POST['id'];
-            $nome = $_POST['descricao'];  
+            $nome = $_POST['nome'];  
 
-             $sql = "DELETE from  `tarefas`  WHERE cod_tarefa = $id";
+             $sql = "DELETE from  `usuarios`  WHERE cod_pessoa = $id";
 
             if (mysqli_query($conn, $sql)) {
                 mensagem("Excluido com sucesso!",'success');
@@ -24,7 +24,7 @@
 
            ?> 
            <hr>
-           <a href="pesquisatarefas.php" class="btn btn-primary">Voltar</a>
+           <a href="pesquisausuarios.php" class="btn btn-primary">Voltar</a>
         </div>      
       </div>
     </div>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    <title>Pesquisa</title>
+    <title>Pesquisa de Tarefas</title>
 </head>
 <body>
     <?php
@@ -27,7 +27,7 @@
                         </form>
                     </div>
                 </nav>   
-                <table class="table table-hover table-dark">
+                <table class="table table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Descrição</th>
@@ -67,26 +67,27 @@
 
     <!-- Modal -->
     <div class="modal fade" id="confirma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Confirmação de Exclusão</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="excluirtarefas_script.php" method="POST"></form>
-                    <p>Deseja excluir <b id="descricao"></b>?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-                    <input type="hidden" name="id" id="cod_tarefa" value="">
-                    <input type="submit" class="btn btn-danger" value="Sim">
-                    </form>
-                </div>
-            </div>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirmação de exclusão</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="excluirtarefas_script.php" method="POST">
+           <p>Deseja realmente excluir <b id="descricao"></b>?</p>           
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+              <input type="hidden" name="descricao" id="descricao" value="">
+              <input type="hidden" name="id" id="cod_tarefa" value="">
+              <input type="submit" class="btn btn-danger" value="Sim">
+            </form>
+          </div>
         </div>
+      </div>
     </div>
 
     <script type="text/javascript">

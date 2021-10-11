@@ -20,6 +20,7 @@
                         <a class="btn btn-primary btn-lg" href="cadastrousuario.php" role="button">Cadastro de Usuários</a>
                         <a class="btn btn-primary btn-lg" href="cadastrotarefas.php" role="button">Cadastro de Tarefas</a>
                         <a class="btn btn-primary btn-lg" href="pesquisatarefas.php" role="button">Pesquisar Tarefas</a>
+                        <a class="btn btn-primary btn-lg" href="pesquisausuarios.php" role="button">Pesquisar Usuarios</a>
                     </p>
                 </div>   
             </div>
